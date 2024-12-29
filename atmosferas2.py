@@ -599,7 +599,7 @@ def bound_bound_Balmer(n,Pob,T):  # n=0 H-alfa, n=1 H-beta #poblaciones de HI da
         n_up=0 #suponemos que no hay HI en n=4 
     g_low=2*(low**2) #funciones de partición g=2n^2
     g_up=2*(up**2)    
-    g_bb = 0.869-(3/up**2)  # factor de Gaunt para líneas de Balmer
+    g_bb = 0.869-(3/up**3)  # factor de Gaunt para líneas de Balmer
     f = ( 2**5/(3**(3/2)*np.pi) ) * ( g_bb/(low**5*up**3) ) * ( (1/low**2) - (1/up**2) )**(-3) #oscilador
     sigma_bb = f * (np.pi*ec**2) / (m_e * c_cgs)
     k_bb = sigma_bb * ( n_low - n_up * (g_low/g_up) )
