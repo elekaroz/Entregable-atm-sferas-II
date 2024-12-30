@@ -450,7 +450,7 @@ def bound_freeHm(T,Pe,l,n_HI,n_Hm):
     k_bf_Hm=[]
     for ii in range(0,len(l)):
         if l[ii]<=l0:
-            sigma_bf=( a0 + (a1*l[ii]) + (a2*(l[ii]**2)) + (a3*(l[ii]**3)) + (a4*(l[ii]**4)) + (a5*(l[ii]**5)) + (a6*(l[ii]**6)) ) *10e-18 
+            sigma_bf=( a0 + (a1*l[ii]) + (a2*(l[ii]**2)) + (a3*(l[ii]**3)) + (a4*(l[ii]**4)) + (a5*(l[ii]**5)) + (a6*(l[ii]**6)) ) *1e-18 
             k_bf_Hm.append(4.158e-10 * sigma_bf * Pe * theta**(5/2) * 10**(0.754*theta) * n_HI)
             #k_bf_Hm=sigma_bf * n_Hm *(1 - np.e**( (-h*c/l[ii]) / (kb*T) ))
         else:
